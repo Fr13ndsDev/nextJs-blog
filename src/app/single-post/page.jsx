@@ -32,8 +32,8 @@ const page = () => {
             Traveling is an enriching experience that opens up new horizons,
             exposes us to different cultures, and creates memories that last a
             lifetime. However, traveling can also be stressful and overwhelming,
-            especially if you don't plan and prepare adequately. In this blog
-            article, we'll explore tips and tricks for a memorable journey and
+            especially if you dont plan and prepare adequately. In this blog
+            article, well explore tips and tricks for a memorable journey and
             how to make the most of your travels.
           </p>
           <p className=" mb-[32px] font-text tracking-wider font-medium leading-[32px] text-[20px]">
@@ -68,7 +68,7 @@ const page = () => {
               Plan Your Itinerary
             </h2>
             <p className=" mb-[37px] font-text tracking-wider font-medium leading-[32px] text-[20px]">
-              While it's essential to leave room for spontaneity and unexpected
+              While its essential to leave room for spontaneity and unexpected
               adventures, having a rough itinerary can help you make the most of
               your time and budget. Identify the must-see sights and experiences
               and prioritize them according to your interests and preferences.
@@ -84,7 +84,7 @@ const page = () => {
           </div>
           <p className=" font-text rounded-[12px] px-[32px] py-[32px] mb-[32px] bg-slate-200 italic text-[24px] font-normal leading-[32px]">
             “ Traveling can expose you to new environments and potential health
-            risks, so it's crucial to take precautions to stay safe and healthy.
+            risks, so its crucial to take precautions to stay safe and healthy.
             ”
           </p>
           <Image src={bgImg2} alt="" />
@@ -118,10 +118,10 @@ const page = () => {
             </h2>
             <p className=" mb-[32px] font-text tracking-wider font-medium leading-[32px] text-[20px]">
               Traveling can expose you to new environments and potential health
-              risks, so it's crucial to take precautions to stay safe and
+              risks, so its crucial to take precautions to stay safe and
               healthy. This includes researching any required vaccinations or
               medications, staying hydrated, washing your hands frequently, and
-              using sunscreen and insect repellent. It's also essential to keep
+              using sunscreen and insect repellent. Its also essential to keep
               your valuables safe and secure and to be aware of your
               surroundings at all times.
             </p>
@@ -144,10 +144,10 @@ const page = () => {
               Capture Memories
             </h2>
             <p className=" mb-[32px] font-text tracking-wider font-medium leading-[32px] text-[20px]">
-              Finally, don't forget to capture memories of your journey. Whether
-              it's through photographs, journaling, or souvenirs, preserving the
+              Finally, dont forget to capture memories of your journey. Whether
+              its through photographs, journaling, or souvenirs, preserving the
               moments and experiences of your travels can bring joy and
-              nostalgia for years to come. However, it's also essential to be
+              nostalgia for years to come. However, its also essential to be
               present in the moment and not let technology distract you from the
               beauty of your surroundings.
             </p>

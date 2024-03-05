@@ -5,8 +5,11 @@ import Navbar from "../navbar/page";
 import Footer from "../footer/page";
 import broImg from "../../assets/broImg.png";
 import Link from "next/link";
+import { getAllUser } from "@/actions/getAllUsers";
 
-const page = () => {
+const page = async () => {
+  const response = await getAllUser();
+
   return (
     <>
       <Navbar />
@@ -41,30 +44,45 @@ const page = () => {
             Latest Post
           </p>
           <div className="grid grid-cols-3 gap-[20px] mb-[100px]">
-            {cardData.map((item) => (
-              <Link
-                href={`/card-details/${item.id}`}
-                key={item.id}
-                className="p-4 border-solid border-2 border-inherit w-[360px] rounded-[12px]"
-              >
-                <Image src={item.image} alt="" />
-                <p className="pt-7 leading-[20px] font-medium font-work text-blue-600">
-                  {item.type}
-                </p>
-                <h2 className="font-work mt-4 font-semibold text-[24px] leading-[28px] mb-[20px]">
-                  {item.title}
-                </h2>
-                <div className="flex items-center gap-[20px]">
-                  <div className="flex gap-2 items-center">
-                    <Image src={item.ava} alt="" />
-                    <p className="font-work text-slate-500 font-medium">
-                      {item.name}
+            {response &&
+              response?.map((item) => (
+                <Link
+                  href={`/card-details/${item._id}`}
+                  key={item._id}
+                  className="p-4  flex flex-col justify-between border-solid border-2 border-inherit w-[360px] rounded-[12px]"
+                >
+                  <div>
+                    <Image
+                      className=" rounded-md h-[240px] object-cover"
+                      width={360}
+                      height={240}
+                      src={item.img}
+                      alt=""
+                    />
+                    <p className="pt-7 leading-[20px] font-medium font-work text-blue-600">
+                      {item.type}
                     </p>
+                    <h2 className="font-work mt-4 font-semibold text-[24px] leading-[28px] mb-[20px]">
+                      {item.title}
+                    </h2>
                   </div>
-                  <p className="font-work text-slate-500 ">{item.date}</p>
-                </div>
-              </Link>
-            ))}
+                  <div className="flex items-center justify-between">
+                    <div className="flex gap-2 items-center">
+                      <Image
+                        width={40}
+                        height={40}
+                        className="rounded-full w-10 h-10 object-cover"
+                        src={item.avatar}
+                        alt=""
+                      />
+                      <p className="font-work text-slate-500 font-medium">
+                        {item.fName}
+                      </p>
+                    </div>
+                    <p className="font-work text-slate-500 ">{item.date}</p>
+                  </div>
+                </Link>
+              ))}
           </div>
         </div>
       </div>

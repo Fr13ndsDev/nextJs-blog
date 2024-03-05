@@ -4,7 +4,7 @@ import { getAllUser } from "@/actions/getAllUsers";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-
+import Navbar from "@/app/navbar/page";
 const Page = () => {
   const [response, setResponse] = useState();
   useEffect(() => {
@@ -28,7 +28,8 @@ const Page = () => {
   // const response = getAllUser();
   return (
     <>
-      <section className="bg-gray-500  dark:bg-gray-900 py-16">
+      <Navbar />
+      <section className="bg-gray-100  dark:bg-gray-900 py-16">
         <div className="flex w-[80%] flex-col items-center px-6 py-8 mx-auto lg:py-0">
           <a
             href="#"
